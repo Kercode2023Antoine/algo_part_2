@@ -27,13 +27,17 @@
 </div>
 
 <script type="text/javascript">
+    // On affichera prénom+nom
     function displayMessage() {
         let firstname = document.getElementById("firstname").value;
+        // récupération d'information prénom
         let lastname = document.getElementById("lastname").value;
+        // récupration d'information nom en majuscule grâce à la méthode toUpperCase
         let fullname = firstname + " " + lastname.toUpperCase();
+        // concaténation des infos, ne pas oublier l'espace !
         let message = "Bonjour " + fullname;
 
-        alert(message)
+        alert(message) // Affichage 
     }
 </script>
 </body>
