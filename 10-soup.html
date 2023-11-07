@@ -67,67 +67,79 @@
         function doYouLikeIt() {
             let carrots = document.getElementById("carrots").checked
             let tomatoes = document.getElementById("tomatoes").checked
-            let cyanide = document.getElementById("cyanide").checked
             let potatoes = document.getElementById("potatoes").checked
             let black_chocolate = document.getElementById("black-chocolate").checked
-            let vitriol = document.getElementById("vitriol").checked
             let white_chocolate = document.getElementById("white-chocolate").checked
-            if (carrots || tomatoes || potatoes === true) {
-                alert("Hum La bonne sou-soupe salée !")
+            let cyanide = document.getElementById("cyanide").checked
+            let vitriol = document.getElementById("vitriol").checked
+
+
+            if (cyanide || vitriol === true) {
+                alert("Game over ...")
             }
-            else {
-                alert("Essaie d'autres ingredients !")
+            else if (white_chocolate && black_chocolate && tomatoes && potatoes && carrots === true) {
+                alert("Beurk ... c'est pas bon !")
             }
-           
+            else { return isSalty() }
+
+
             // CODE HERE !
         }
 
         function isSalty() {
             let carrots = document.getElementById("carrots").checked
             let tomatoes = document.getElementById("tomatoes").checked
-            let cyanide = document.getElementById("cyanide").checked
             let potatoes = document.getElementById("potatoes").checked
-            let black_chocolate = document.getElementById("black-chocolate").checked
-            let vitriol = document.getElementById("vitriol").checked
-            let white_chocolate = document.getElementById("white-chocolate").checked
+
+
+
             // CODE HERE !
             if (carrots && tomatoes && potatoes === true) {
                 alert("Hum La bonne sou-soupe salée !")
             }
-            else if (carrots && tomatoes === true){
+
+            else if (carrots && tomatoes === true) {
                 alert("Hum La bonne sou-soupe salée !")
             }
-            else if (tomatoes && potatoes === true){
+            else if (tomatoes && potatoes === true) {
                 alert("Hum La bonne sou-soupe salée !")
             }
             else if (carrots && potatoes === true) {
                 alert("Hum La bonne sou-soupe salée !")
             }
-            else if (black_chocolate && white_chocolate === true) {
-                alert("Hum La bonne sou-soupe sucrée !")
-            }
+            else { return isSweet() }
+
         }
 
         function isSweet() {
             let carrots = document.getElementById("carrots").checked
-            let tomatoes = document.getElementById("tomatoes").checked
-            let cyanide = document.getElementById("cyanide").checked
-            let potatoes = document.getElementById("potatoes").checked
             let black_chocolate = document.getElementById("black-chocolate").checked
-            let vitriol = document.getElementById("vitriol").checked
             let white_chocolate = document.getElementById("white-chocolate").checked
+            if (white_chocolate && black_chocolate && carrots === true) {
+                alert("Hum la bonne sou-soupe sucrée !")
+            }
+            else if (white_chocolate && carrots === true) {
+                alert("Hum la bonne sou-soupe sucrée !")
+            }
+            else if (black_chocolate && white_chocolate === true) {
+                alert("Hum la bonne sou-soupe sucrée !")
+            }
+            else if (black_chocolate && carrots === true) {
+                alert("Hum la bonne sou-soupe sucrée !")
+            }
+            else { return isPoisoned() }
             // CODE HERE !
-            
+
         }
 
         function isPoisoned() {
-            let carrots = document.getElementById("carrots").checked
-            let tomatoes = document.getElementById("tomatoes").checked
             let cyanide = document.getElementById("cyanide").checked
-            let potatoes = document.getElementById("potatoes").checked
-            let black_chocolate = document.getElementById("black-chocolate").checked
             let vitriol = document.getElementById("vitriol").checked
-            let white_chocolate = document.getElementById("white-chocolate").checked
+
+            if (cyanide || vitriol === true) {
+                alert("Game over ...")
+            }
+            else { return doYouLikeIt() }
             // CODE HERE !
         }
     </script>
