@@ -42,6 +42,11 @@
     function cartValue() {
         let articles = document.getElementById("articles");
         let selectedArticle = articles.options[articles.selectedIndex].value;
+        
+
+        if (articles.value === "one"&&  VALID_PROMOTION_CODE) {
+            alert("La valeur de votre panier et de 27 €")
+        }
 
         // CODE HERE !
     }
