@@ -31,10 +31,12 @@
     <script type="text/javascript">
         // ajouter + 1 au chiffre selectionné
         function incrementNumber() {
-            let number = document.getElementById("number").value;
-            // utilisation de ++number, number++ ne fonctionnant pas
-            let message = " votre nouveau chiffre magique est " + ++number
-            alert(message)
+            // Utilisation de Number.parseInt pour déclarer un chiffre entier
+            let number = Number.parseInt(document.getElementById("number").value);
+            number += 1;
+            // concaténation du message + la valeur de number.
+            let message = " votre nouveau chiffre magique est " + number;
+            alert(message);
 
             // CODE HERE !
         }

@@ -50,18 +50,22 @@
             // création de 2 variables avec les valeurs de bases
             let one = 30
             let two = 50
-
-            // Utilisation des variables dans le selecteur
-            if (selectedArticle === "one" && promo == VALID_PROMOTION_CODE) {
-                value = one;
-            } else if (selectedArticle === "two" && promo == VALID_PROMOTION_CODE) {
-                value = two;
-            }
             // Ajout d'une variable promotion pour le calcul
             let promotion = 0.10;
             let valueFinal = value - (value * promotion);
-            // Utilisation du code universel '\u20AC pour le signe "euros"
+
+            // Utilisation des variables dans le selecteur
+            if (selectedArticle === "one" && promo === VALID_PROMOTION_CODE) {
+                value = one;
+
+            } else if (selectedArticle === "two" && promo === VALID_PROMOTION_CODE) {
+                value = two;
+
+            }
+            
             alert("La valeur de votre panier est de " + valueFinal + '\u20AC');
+            // Utilisation du code universel '\u20AC pour le signe "euros"
+
 
             // CODE HERE !
         }

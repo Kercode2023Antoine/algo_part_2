@@ -37,16 +37,26 @@
     </div>
 
     <script type="text/javascript">
+
+        const MAJORITY = 18;
         // Vérification de l'age d'un utilisateur
         function verifyAge() {
             let age = document.getElementById("age").value;
-            if (age >= 18) {
+
+            if (age >= MAJORITY) {
                 alert("Bienvenue sur le site")
             }
             else {
                 alert("Vous devez être majeur pour accèder au site !")
             }
 
+            /* if (age >= 18) {
+                 alert("Bienvenue sur le site")
+             }
+             else {
+                 alert("Vous devez être majeur pour accèder au site !")
+             }
+             */
             // CODE HERE !
         }
     </script>

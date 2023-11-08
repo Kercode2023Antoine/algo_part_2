@@ -42,16 +42,28 @@
         function primaryColors() {
             let colors = document.getElementById("colors");
             let secondaryColor = colors.options[colors.selectedIndex].value;
-
-            if (colors.value == "purple") {
+            /*
+                        if (colors.value == "purple") {
+                            alert("Le violet et composé de bleu et de rouge")
+                        } else if (colors.value == "green") {
+                            alert("Le vert est composé de bleu et de jaune")
+                        } else if (colors.value == "orange"){
+                            alert("Le orange est composé de jaune et de rouge")
+                        }
+                        else { 
+                            alert("Veuillez choisir une couleur")
+                        }
+            */
+            if (secondaryColor == "purple") {
                 alert("Le violet et composé de bleu et de rouge")
-            } else if (colors.value == "green") {
+            } else if (secondaryColor == "green") {
                 alert("Le vert est composé de bleu et de jaune")
-            } else {
-                alert("Le orange est compsé de jaune et de rouge")
+            } else if (secondaryColor == "orange") {
+                alert("Le orange est composé de jaune et de rouge")
             }
-
-
+            else {
+                alert("Veuillez choisir une couleur")
+            }
 
 
             // CODE HERE !
