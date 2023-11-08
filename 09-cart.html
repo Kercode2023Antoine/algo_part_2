@@ -46,14 +46,15 @@
         function cartValue() {
             let articles = document.getElementById("articles");
             let selectedArticle = articles.options[articles.selectedIndex].value;
-            // création de 2 variables avec lmes valeurs de bases
+            let promo = document.getElementById("promotion").value
+            // création de 2 variables avec les valeurs de bases
             let one = 30
             let two = 50
 
             // Utilisation des variables dans le selecteur
-            if (selectedArticle === "one") {
+            if (selectedArticle === "one" && promo == VALID_PROMOTION_CODE) {
                 value = one;
-            } else if (selectedArticle === "two") {
+            } else if (selectedArticle === "two" && promo == VALID_PROMOTION_CODE) {
                 value = two;
             }
             // Ajout d'une variable promotion pour le calcul
