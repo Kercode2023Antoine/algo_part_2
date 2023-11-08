@@ -29,9 +29,11 @@
     </div>
 
     <script type="text/javascript">
+        // ajouter + 1 au chiffre selectionné
         function incrementNumber() {
             let number = document.getElementById("number").value;
-            let message = " votre nouveau chiffre magique est "  + ++number
+            // utilisation de ++number, number++ ne fonctionnant pas
+            let message = " votre nouveau chiffre magique est " + ++number
             alert(message)
 
             // CODE HERE !
