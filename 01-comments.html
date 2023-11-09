@@ -32,14 +32,18 @@
     <script type="text/javascript">
         // On affichera prénom+nom
         function displayMessage() {
+            // récupération d'information prénom identifer par "firstname"
             let firstname = document.getElementById("firstname").value;
-            // récupération d'information prénom
+            // récupération d'information nom identifer par "lastname"
             let lastname = document.getElementById("lastname").value;
-            // récupration d'information nom en majuscule grâce à la méthode toUpperCase
+            /*
+             * concaténation des infos, ne pas oublier l'espace ! 
+             * + toupperCase pour nom en MAJ
+             */
             let fullname = firstname + " " + lastname.toUpperCase();
-            // concaténation des infos, ne pas oublier l'espace !
+            // Creation du message 
             let message = "Bonjour " + fullname;
-
+            // Affichage du message en pop-up
             alert(message) // Affichage 
         }
     </script>

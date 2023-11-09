@@ -44,16 +44,16 @@
 
     <script type="text/javascript">
         // Fonction de conversion Eur <-> USD 
-        const EUTO_TO_USD = 1.0729
+        const EURO_TO_USD = 1.0729
 
         function converter() {
             let value = document.getElementById("value").value;
             let currency = document.getElementById("currencies").value;
 
             if (currency === "eur"){ 
-                alert(value + "Euros ->" + Number.parseFloat(value * EURO_TO_USD).toFixed(2) +" Dollars");
+                alert(value + " Euros ->" + Number.parseFloat(value * EURO_TO_USD).toFixed(2) +" Dollars");
             } else 
-            alert(value + "Dollars ->" + Number.parseFloat(value / EURO_TO_USD).toFixed(2) +" Euros");
+            alert(value + " Dollars ->" + Number.parseFloat(value / EURO_TO_USD).toFixed(2) +" Euros");
         }
 
 
