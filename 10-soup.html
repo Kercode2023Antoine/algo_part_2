@@ -65,16 +65,32 @@
 
     <script type="text/javascript">
         // fonction avec tout les aliments
+            
+
         function doYouLikeIt() {
-            let carrots = document.getElementById("carrots").checked
+
+            if (isPoisoned()) {
+                alert("Game over ...")
+            } else if (isSalty() && isSweet()) {
+                alert("Beurk ... c'est pas bon !")
+            } else if (isSalty() || isSweet()) {
+                if (isSalty()) {
+                    alert("Hum ... La bonne sou-soupe salée !")
+                } else {
+                    alert("Hum ... la bonne sou-soupe sucrée !")
+                }
+            } else {
+                alert("J'ai faim !")
+            }      
+            }
+/*          let carrots = document.getElementById("carrots").checked
             let tomatoes = document.getElementById("tomatoes").checked
             let potatoes = document.getElementById("potatoes").checked
             let black_chocolate = document.getElementById("black-chocolate").checked
             let white_chocolate = document.getElementById("white-chocolate").checked
             let cyanide = document.getElementById("cyanide").checked
             let vitriol = document.getElementById("vitriol").checked
-
-
+ 
             if (cyanide || vitriol === true) {
                 alert("Game over ...")
             }
@@ -85,16 +101,17 @@
             else { return isSalty() }
 
 
-            // CODE HERE !
-        }
+*/            // CODE HERE !
+        
         // Uniquement les aliments salé
         function isSalty() {
+            
             let carrots = document.getElementById("carrots").checked
             let tomatoes = document.getElementById("tomatoes").checked
             let potatoes = document.getElementById("potatoes").checked
 
-
-
+            return carrots || potatoes || tomatoes;
+/*
             // CODE HERE !
             if (carrots && tomatoes && potatoes === true) {
                 alert("Hum La bonne sou-soupe salée !")
@@ -109,15 +126,19 @@
             else if (carrots && potatoes === true) {
                 alert("Hum La bonne sou-soupe salée !")
             }
-            // Renvoi à lka fonction sucrée
+            // Renvoi à la fonction sucrée
             else { return isSweet() }
-
+*/
         }
         // Uniquement les aliments sucrée
         function isSweet() {
-            let carrots = document.getElementById("carrots").checked
             let black_chocolate = document.getElementById("black-chocolate").checked
             let white_chocolate = document.getElementById("white-chocolate").checked
+            
+
+            return black_chocolate || white_chocolate;
+
+/*
             if (white_chocolate && black_chocolate && carrots === true) {
                 alert("Hum la bonne sou-soupe sucrée !")
             }
@@ -133,18 +154,21 @@
             // renvoi à la fonction poison
             else { return isPoisoned() }
             // CODE HERE !
-
+*/
         }
         // Uniquement les poisons
         function isPoisoned() {
             let cyanide = document.getElementById("cyanide").checked
             let vitriol = document.getElementById("vitriol").checked
 
+            return cyanide || vitriol;
+         
+/*
             if (cyanide || vitriol === true) {
                 alert("Game over ...")
             }
             else { return doYouLikeIt() }
-            // CODE HERE !
+*/          // CODE HERE !
         }
     </script>
 </body>
