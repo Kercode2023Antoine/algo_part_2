@@ -44,8 +44,20 @@
 
     <script type="text/javascript">
         // Fonction de conversion Eur <-> USD 
+        const EUTO_TO_USD = 1.0729
+
         function converter() {
-            // création d'une constante "change" 
+            let value = document.getElementById("value").value;
+            let currency = document.getElementById("currencies").value;
+
+            if (currency === "eur"){ 
+                alert(value + "Euros ->" + Number.parseFloat(value * EURO_TO_USD).toFixed(2) +" Dollars");
+            } else 
+            alert(value + "Dollars ->" + Number.parseFloat(value / EURO_TO_USD).toFixed(2) +" Euros");
+        }
+
+
+          /*  // création d'une constante "change" 
             const change = 1.0729;
             let value = document.getElementById("value");
             // Ajout de selection de valeur depuis le "menu déroullant"
@@ -61,7 +73,8 @@
 
             // 1 EUR = 1.0729 USD
             // CODE HERE !
-        }
+        */    
+        
     </script>
 </body>
 
